@@ -5,7 +5,13 @@ import java.util.Map;
 
 public class CalculationSolution {
 
-
+	/*
+	 * 1. Two Sum
+	 * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+	 * You may assume that each input would have exactly one solution.
+	 * https://leetcode.com/problems/two-sum/
+	 * Solution 1
+	 */
 	public Integer[] twoSumSolution1(int[] nums, int target) {
 		Map<Integer, Integer> hashMap = new HashMap<Integer, Integer>();
 		for(int i=0; i<nums.length; i++) {
@@ -20,6 +26,10 @@ public class CalculationSolution {
         return new Integer[0];
     }
 	
+	/*
+	 * 1. Two Sum
+	 * Solution 2
+	 */
 	public Integer[] twoSumSolution2(int[] nums, int target) {
 		for(int i=0; i<nums.length; i++) {
 			for(int j=0; j<nums.length-1; j++){
