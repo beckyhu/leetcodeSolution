@@ -14,7 +14,6 @@ public class StringSolution {
         	cArr[i] = cArr[cArrLength -1 - i];
         	cArr[cArrLength - 1 - i] = temp;
         }
-
         return String.valueOf(cArr);
     }
 	

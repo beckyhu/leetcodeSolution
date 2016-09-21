@@ -17,7 +17,6 @@ public class CalculationSolution {
 				return new Integer[] {i, hashMap.get(complement)};
 			}
 		}
-		
         return new Integer[0];
     }
 	

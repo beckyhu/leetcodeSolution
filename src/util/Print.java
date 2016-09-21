@@ -9,7 +9,6 @@ public class Print {
 			if(i<arr.length-1){
 				System.out.print(",");
 			}
-			
 		}
 		System.out.print("]");
 	}
