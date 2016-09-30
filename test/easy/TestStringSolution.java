@@ -33,4 +33,16 @@ public class TestStringSolution {
 		String reversedStr = stringSolution.reverseString("abcdefgh");
 		Assert.assertEquals("hgfedcba", reversedStr);
 	}
+	@Test
+	public void testZigZagConverte() {
+		String input = "PAYPALISHIRING";
+		String output = stringSolution.zigZagConverte(input, 3);
+		Assert.assertEquals("PAHNAPLSIIGYIR", output);
+		
+		output = stringSolution.zigZagConverte(input, 4);
+		Assert.assertEquals("PINALSIGYAHRPI", output);
+		
+		output = stringSolution.zigZagConverte(input, 5);
+		Assert.assertEquals("PHASIYIRPLIGAN", output);
+	}
 }
