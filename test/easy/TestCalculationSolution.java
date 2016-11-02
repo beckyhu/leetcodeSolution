@@ -49,4 +49,10 @@ public class TestCalculationSolution {
 		int singleNumber = calculationSolution.singleNumber(input);
 		Assert.assertEquals(4, singleNumber);
 	}
+	@Test
+	public void testgetSum() {
+		int a = 123, b = 976;
+		int result = calculationSolution.getSum(a, b);
+		Assert.assertEquals(a+b, result);
+	}
 }
