@@ -41,13 +41,28 @@ public class CalculationSolution {
 		return new Integer[0];
 	}
 	
-	/*
+	/* 
 	 * 292. Nim Game
 	 * https://leetcode.com/problems/nim-game/
+	 * TODO: 
 	 */
 	public boolean canWinNim(int n) {
-        
+        if(n % 4 != 0) {
+        	return true;
+        }
     	return false;
     }
-
+	/*
+	 * 136. Single Number
+	 * Given an array of integers, every element appears twice except for one. Find that single one.
+	 * https://leetcode.com/problems/single-number/
+	 * shint: XOR
+	 */
+	public int singleNumber(int[] nums) {
+		int result = 0;
+        for(int i : nums) {
+        	result ^= i;
+        }
+		return result;
+    }
 }

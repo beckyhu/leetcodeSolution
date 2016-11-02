@@ -42,4 +42,11 @@ public class TestCalculationSolution {
 		Integer[] resultArr = calculationSolution.twoSumSolution2(twoSumCaseArr, 48);
 		Assert.assertArrayEquals(new Integer[]{3,5}, resultArr);
 	}
+	
+	@Test
+	public void testSingleNumber() {
+		int[] input = {1, 2, 3, 3, 2, 4, 1};
+		int singleNumber = calculationSolution.singleNumber(input);
+		Assert.assertEquals(4, singleNumber);
+	}
 }
