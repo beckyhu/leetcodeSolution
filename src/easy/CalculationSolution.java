@@ -40,5 +40,14 @@ public class CalculationSolution {
 		}
 		return new Integer[0];
 	}
+	
+	/*
+	 * 292. Nim Game
+	 * https://leetcode.com/problems/nim-game/
+	 */
+	public boolean canWinNim(int n) {
+        
+    	return false;
+    }
 
 }

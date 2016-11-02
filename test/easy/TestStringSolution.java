@@ -1,11 +1,15 @@
 package easy;
 
+import java.util.List;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import util.Print;
 
 public class TestStringSolution {
 
@@ -44,5 +48,14 @@ public class TestStringSolution {
 		
 		output = stringSolution.zigZagConverte(input, 5);
 		Assert.assertEquals("PHASIYIRPLIGAN", output);
+	}
+	@Test
+	public void testFizzBuzz() {
+		int input = 20;
+		List<String> result = stringSolution.fizzBuzz(input);
+		Assert.assertEquals(20, result.size());
+		String[] expecteds = {"1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz",
+				"11","Fizz","13","14","FizzBuzz","16","17","Fizz","19","Buzz"};
+		Assert.assertArrayEquals("a", expecteds, result.toArray());
 	}
 }
