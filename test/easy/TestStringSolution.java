@@ -56,6 +56,6 @@ public class TestStringSolution {
 		Assert.assertEquals(20, result.size());
 		String[] expecteds = {"1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz",
 				"11","Fizz","13","14","FizzBuzz","16","17","Fizz","19","Buzz"};
-		Assert.assertArrayEquals("a", expecteds, result.toArray());
+		Assert.assertArrayEquals("FizzBuzz:", expecteds, result.toArray());
 	}
 }

@@ -40,7 +40,8 @@ public class CalculationSolution {
 	}
 
 	/**
-	 * 292. Nim Game https://leetcode.com/problems/nim-game/ TODO:
+	 * 292. Nim Game https://leetcode.com/problems/nim-game/ 
+	 * TODO:
 	 */
 	public boolean canWinNim(int n) {
 		if (n % 4 != 0) {
@@ -68,10 +69,10 @@ public class CalculationSolution {
 	 * https://leetcode.com/problems/sum-of-two-integers/
 	 */
 	public int getSum(int a, int b) {
-//		if(b == 0) return a;
-//		int sum = a ^ b;
-//		int carray = (a & b) << 1;
-//		return getSum(sum, carray);
-		return b==0 ? a : getSum(a^b, (a & b) << 1);
+		// if(b == 0) return a;
+		// int sum = a ^ b;
+		// int carray = (a & b) << 1;
+		// return getSum(sum, carray);
+		return b == 0 ? a : getSum(a ^ b, (a & b) << 1);
 	}
 }
