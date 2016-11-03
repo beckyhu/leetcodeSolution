@@ -33,7 +33,7 @@ public class TestTreeSolution {
 	public void testmaxDepth() {
 		TreeNode root = DataHelper.generateBinTree1();
 		int maxDepth = treeSolution.maxDepth(root);
-		Assert.assertEquals("TreeMaxDepth", 4, maxDepth);
+		Assert.assertEquals("TreeMaxDepth:", 5, maxDepth);
 	}
 
 }

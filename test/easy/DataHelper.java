@@ -27,15 +27,15 @@ public class DataHelper {
 		TreeNode n7 = new TreeNode(7);
 		TreeNode n8 = new TreeNode(8);
 		TreeNode n9 = new TreeNode(9);
-		root.setLeft(n1);
-		root.setRight(n2);
-		n1.setLeft(n3);
-		n1.setRight(n4);
-		n2.setLeft(n5);
-		n2.setRight(n6);
-		n3.setLeft(n7);
-		n3.setRight(n8);
-		n8.setLeft(n9);
+		root.left = n1;
+		root.right = n2;
+		n1.left = n3;
+		n1.right = n4;
+		n2.left = n5;
+		n2.right = n6;
+		n3.left = n7;
+		n3.right = n8;
+		n8.left = n9;
 		return root;
 	}
 }
