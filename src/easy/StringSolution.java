@@ -96,4 +96,18 @@ public class StringSolution {
 
 		return result;
 	}
+	/**
+	 * 389. Find the Difference
+	 * https://leetcode.com/problems/find-the-difference/
+	 */
+	public char findTheDifference(String s, String t) {
+		char diff = 0;
+        for(char c : s.toCharArray()) {
+        	diff ^= c;
+        }
+        for(char c : t.toCharArray()) {
+        	diff ^= c;
+        }
+		return diff;
+    }
 }

@@ -38,4 +38,36 @@ public class DataHelper {
 		n8.left = n9;
 		return root;
 	}
+	
+	/**
+	 *            4
+	 *           / \
+	 *          2   7
+	 *         / \ / \
+	 *        1  3 6  9
+	 *        
+	 *            4
+	 *           / \
+	 *          7   2
+	 *         / \ / \
+	 *        9  6 3  1
+	 * @return
+	 */
+	public static TreeNode generateBinTree2() {
+		TreeNode root = new TreeNode(4);
+		TreeNode n1 = new TreeNode(2);
+		TreeNode n2 = new TreeNode(7);
+		TreeNode n3 = new TreeNode(1);
+		TreeNode n4 = new TreeNode(3);
+		TreeNode n5 = new TreeNode(6);
+		TreeNode n6 = new TreeNode(9);
+		root.left = n1;
+		root.right = n2;
+		n1.left = n3;
+		n1.right = n4;
+		n2.left = n5;
+		n2.right = n6;
+		return root;
+	}
+
 }

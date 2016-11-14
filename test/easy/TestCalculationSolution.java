@@ -55,4 +55,16 @@ public class TestCalculationSolution {
 		int result = calculationSolution.getSum(a, b);
 		Assert.assertEquals(a+b, result);
 	}
+	@Test
+	public void test_addDigits() {
+		int input = 129;
+		Assert.assertEquals(3, calculationSolution.addDigits1(input));
+		Assert.assertEquals(3, calculationSolution.addDigits2(input));
+		input = 0;
+		Assert.assertEquals(0, calculationSolution.addDigits1(input));
+		Assert.assertEquals(0, calculationSolution.addDigits2(input));
+		input = 9;
+		Assert.assertEquals(9, calculationSolution.addDigits1(input));
+		Assert.assertEquals(9, calculationSolution.addDigits2(input));
+	}
 }

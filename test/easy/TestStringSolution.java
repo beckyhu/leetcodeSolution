@@ -58,4 +58,12 @@ public class TestStringSolution {
 				"11","Fizz","13","14","FizzBuzz","16","17","Fizz","19","Buzz"};
 		Assert.assertArrayEquals("FizzBuzz:", expecteds, result.toArray());
 	}
+	
+	@Test
+	public void test_findTheDifference() {
+		String s = "abcd";
+		String t = "abecd";
+		char diff = stringSolution.findTheDifference(s, t);
+		Assert.assertEquals("findTheDifference is: ", 'e', diff);
+	}
 }

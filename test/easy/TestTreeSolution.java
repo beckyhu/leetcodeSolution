@@ -1,5 +1,8 @@
 package easy;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -8,6 +11,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import dataStructure.TreeNode;
+import util.DataUtil;
 
 
 public class TestTreeSolution {
@@ -34,6 +38,15 @@ public class TestTreeSolution {
 		TreeNode root = DataHelper.generateBinTree1();
 		int maxDepth = treeSolution.maxDepth(root);
 		Assert.assertEquals("TreeMaxDepth:", 5, maxDepth);
+	}
+	@Test
+	public void testinvertTree() {
+		TreeNode root = DataHelper.generateBinTree2();
+		TreeNode invertedTree = treeSolution.invertTree(root);
+		List<Integer> preOrderTraversalList = new LinkedList<Integer>();
+		DataUtil.preOrderTraversal(invertedTree, preOrderTraversalList);
+		Integer[] expect = new Integer[] {4, 7, 9, 6, 2, 3, 1};
+		Assert.assertArrayEquals("InvertTree preOrder result: ", expect, preOrderTraversalList.toArray());
 	}
 
 }

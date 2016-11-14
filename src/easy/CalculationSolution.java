@@ -75,4 +75,30 @@ public class CalculationSolution {
 		// return getSum(sum, carray);
 		return b == 0 ? a : getSum(a ^ b, (a & b) << 1);
 	}
+	
+	/**
+	 * 258. Add Digits
+	 * https://leetcode.com/problems/add-digits/
+	 */
+	public int addDigits1(int num) {
+        while( num / 10 > 0) {
+        	int sum = 0;
+        	while(num > 0) {
+        		sum += num % 10;
+        		num /= 10;
+        	}
+        	num = sum;
+        }
+		return num;
+    }
+	public int addDigits2(int num) {
+		int result = num % 9;
+		if(num == 0) {
+			return 0;
+		}else if(result == 0) {
+			return 9;
+		}else {
+			return result;
+		}
+	}
 }
