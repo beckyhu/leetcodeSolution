@@ -66,4 +66,10 @@ public class TestStringSolution {
 		char diff = stringSolution.findTheDifference(s, t);
 		Assert.assertEquals("findTheDifference is: ", 'e', diff);
 	}
+	@Test
+	public void testcanConstruct() {
+		Assert.assertFalse(stringSolution.canConstruct("a", "b"));
+		Assert.assertFalse(stringSolution.canConstruct("aa", "ab"));
+		Assert.assertTrue(stringSolution.canConstruct("aa", "aab"));
+	}
 }

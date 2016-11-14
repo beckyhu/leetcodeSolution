@@ -110,4 +110,14 @@ public class StringSolution {
         }
 		return diff;
     }
+	
+	/**
+	 * 383. Ransom Note
+	 * https://leetcode.com/problems/ransom-note/
+	 */
+	public boolean canConstruct(String ransomNote, String magazine) {
+		
+        
+		return false;
+    }
 }
