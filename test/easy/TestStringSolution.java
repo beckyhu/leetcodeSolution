@@ -71,5 +71,6 @@ public class TestStringSolution {
 		Assert.assertFalse(stringSolution.canConstruct("a", "b"));
 		Assert.assertFalse(stringSolution.canConstruct("aa", "ab"));
 		Assert.assertTrue(stringSolution.canConstruct("aa", "aab"));
+		Assert.assertTrue(stringSolution.canConstruct("aca", "aabc"));
 	}
 }

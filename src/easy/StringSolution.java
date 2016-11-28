@@ -116,8 +116,17 @@ public class StringSolution {
 	 * https://leetcode.com/problems/ransom-note/
 	 */
 	public boolean canConstruct(String ransomNote, String magazine) {
-		
-        
-		return false;
+		int[] magazineIntArr = new int[26];
+		for(int i = 0; i < magazine.length(); i++) {
+			magazineIntArr[magazine.charAt(i) - 97]++;
+		}
+        for(int i = 0; i < ransomNote.length(); i++) {
+        	int index = ransomNote.charAt(i) - 97;
+        	magazineIntArr[index]--;
+        	if(magazineIntArr[index] < 0){
+        		return false;
+        	}
+        }
+		return true;
     }
 }
