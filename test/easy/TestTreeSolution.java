@@ -48,5 +48,13 @@ public class TestTreeSolution {
 		Integer[] expect = new Integer[] {4, 7, 9, 6, 2, 3, 1};
 		Assert.assertArrayEquals("InvertTree preOrder result: ", expect, preOrderTraversalList.toArray());
 	}
-
+	
+	@Test
+	public void testsumOfLeftLeaves() {
+		TreeNode root = DataHelper.generateBinTree1();
+		int result = treeSolution.sumOfLeftLeaves(root);
+		Assert.assertEquals("sumOfLeftLeaves:", 21, result);
+		result = treeSolution.sumOfLeftLeaves2(root);
+		Assert.assertEquals("sumOfLeftLeaves2:", 21, result);
+	}
 }
