@@ -1,5 +1,8 @@
 package easy;
 
+import java.util.LinkedList;
+
+import dataStructure.ListNode;
 import dataStructure.TreeNode;
 
 public class DataHelper {
@@ -69,5 +72,4 @@ public class DataHelper {
 		n2.right = n6;
 		return root;
 	}
-
 }
