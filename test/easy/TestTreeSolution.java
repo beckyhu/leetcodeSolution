@@ -57,4 +57,9 @@ public class TestTreeSolution {
 		result = treeSolution.sumOfLeftLeaves2(root);
 		Assert.assertEquals("sumOfLeftLeaves2:", 21, result);
 	}
+	
+	@Test
+	public void testisSameTree() {
+		
+	}
 }

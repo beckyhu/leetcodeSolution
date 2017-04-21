@@ -79,4 +79,12 @@ public class TreeSolution {
 		return sum;
 	}
 
+	/**
+	 * 100. Same Tree
+	 * https://leetcode.com/problems/same-tree/
+	 */
+	public boolean isSameTree(TreeNode p, TreeNode q) {
+        
+		return true;
+    }
 }
