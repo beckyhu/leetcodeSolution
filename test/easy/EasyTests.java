@@ -8,4 +8,5 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({TestCalculationSolution.class, TestStringSolution.class})
 public class EasyTests {
 
+	
 }

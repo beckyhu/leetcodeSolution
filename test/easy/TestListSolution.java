@@ -40,7 +40,6 @@ public class TestListSolution {
 		listSolution.deleteNode(node3);
 
 		Assert.assertTrue(node1.next.next.val == 4);
-		
 	}
 
 }
