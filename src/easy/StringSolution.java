@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Stack;
 
 public class StringSolution {
 	/**
@@ -129,4 +130,122 @@ public class StringSolution {
         }
 		return true;
     }
+	/**
+	 * 10. Regular Expression Matching
+	 * @param s
+	 * @param p
+	 * @return
+	 */
+	public boolean isMatch(String s, String p) {
+		if(s.length() == 0){
+			return matchEmpty(p);
+		}
+		if(p.length() == 0) {
+			return false;
+		}
+		char cs0 = s.charAt(0);
+		char cp0 = p.charAt(0);
+		char cp1 = ' ';
+		if(p.length() > 1) {
+			cp1 = p.charAt(1);
+		}
+		if(cp1 == '*'){
+			if(matchOneChar(cs0, cp0)){
+				return isMatch(s.substring(1), p) || isMatch(s, p.substring(2));
+			}
+			else {
+				return isMatch(s, p.substring(2));
+			}
+		}
+		else {
+			if(matchOneChar(cs0, cp0)){
+				return isMatch(s.substring(1), p.substring(1));
+			}
+			else{
+				return false;
+			}
+		}
+	}
+	private boolean matchOneChar(char c, char p) {
+		return p == '.' || c == p;
+	}
+	private boolean matchEmpty(String p) {
+		if(p.length() % 2 != 0){
+			return false;
+		}
+		for(int i = 1; i<p.length(); i++) {
+			if(p.charAt(i) != '*'){
+				return false;
+			}
+		}
+		return true;
+	}
+	/**
+	 * 	14. Longest Common Prefix   
+	 */
+	 public String longestCommonPrefix(String[] strs) {
+		 if(strs.length == 0){
+			 return "";
+		 }
+		 String prefix = strs[0];
+		 for(int i=1; i<strs.length; i++) {
+			int j = 0;
+			while(j<strs[i].length() && j < prefix.length() && strs[i].charAt(j) == prefix.charAt(j)){
+				j++;
+			}
+			if(j == 0) {
+				return "";
+			}
+			prefix = prefix.substring(0, j);
+		 }
+		 return prefix;
+	 }
+	 /**
+	  * 20. Valid Parentheses
+	  * @param s
+	  * @return
+	  */
+	 public boolean isValidParentheses(String s) {
+		 Stack<Character> stack = new Stack<>();
+		 char[] cArr = s.toCharArray();
+		 for(int i=0; i<cArr.length; i++) {
+			 if(cArr[i] == '(' || cArr[i] == '[' || cArr[i] == '{'){
+				 stack.push(cArr[i]);
+				 continue;
+			 }
+			 if(cArr[i] == ')'){
+				 if(stack.isEmpty() || stack.pop() != '('){
+					 return false;
+				 }
+			 }else if(cArr[i] == ']') {
+				 if(stack.isEmpty() || stack.pop() != '['){
+					 return false;
+				 }
+			 }else if(cArr[i] == '}') {
+				 if(stack.isEmpty() || stack.pop() != '{'){
+					 return false;
+				 }
+			 }else{
+				 return false;
+			 }
+		 }
+		 return stack.isEmpty();
+	 }
+	 /**
+	  * 28. Implement strStr()
+	  * @param haystack
+	  * @param needle
+	  * @return
+	  */
+	 public int strStr(String haystack, String needle) {
+	        if(haystack == null || needle == null) {
+	            return -1;
+	        }
+	        for(int i=0; i<haystack.length()-needle.length()+1; i++) {
+	            if(haystack.substring(i, i+needle.length()).equals(needle)){
+	                return i;
+	            }
+	        }
+	        return -1;
+	    }
 }

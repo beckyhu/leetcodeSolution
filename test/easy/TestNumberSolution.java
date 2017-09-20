@@ -54,5 +54,24 @@ public class TestNumberSolution {
 		result = numberSolution.intersection(nums1, nums2);
 		Assert.assertArrayEquals(new int[] {}, result);
 	}
-
+	@Test
+	public void testReverse() {
+		assertEquals(0, numberSolution.reverse(0));
+		assertEquals(-12, numberSolution.reverse(-21));
+		assertEquals(123, numberSolution.reverse(321));
+		assertEquals(0, numberSolution.reverse(1000000009));
+	}
+	@Test
+	public void testMyAtoi() {
+		assertEquals(-2147483648, numberSolution.myAtoi("      -11919730356x"));
+		assertEquals(0, numberSolution.myAtoi("\"\""));
+		assertEquals(12345, numberSolution.myAtoi("12345"));
+		assertEquals(Integer.MAX_VALUE, numberSolution.myAtoi("99999999999999999"));
+		assertEquals(-123, numberSolution.myAtoi("-123"));
+		assertEquals(123, numberSolution.myAtoi("+123"));
+		assertEquals(0, numberSolution.myAtoi(""));
+		assertEquals(10, numberSolution.myAtoi("   010"));
+		assertEquals(-2147483648, numberSolution.myAtoi("-2147483649"));
+		
+	}
 }
